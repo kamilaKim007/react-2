@@ -1,0 +1,22 @@
+.footer{
+    padding: 90px 0;
+    background: #1A1F25;;
+    color: white;
+    text-align: center;
+    .inf{
+        width: 266px;
+        height: 150px;
+        text-align: left;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #E6E6E6;
+    }
+    &-icons{
+        position: absolute;
+        display: flex;
+        // left: 700px;
+    }
+}
