@@ -1,47 +1,55 @@
-import React from 'react'
 import Logo from '../../assets/header/logo.svg'
 import BMenu from '../../assets/header/burger-menu.svg'
-import Flogo1 from '../../assets/footer/22.svg'
-import Flogo2 from '../../assets/footer/23.svg'
-import Flogo3 from '../../assets/footer/24.svg'
-import Flogo4 from '../../assets/footer/25.svg'
-import Flogo5 from '../../assets/footer/26.svg'
-const [status, setStatus] = useState(false)
+import logo1 from '../../assets/header/22.svg'
+import logo2 from '../../assets/header/23.svg'
+import logo3 from '../../assets/header/24.svg'
+import logo4 from '../../assets/header/25.svg'
+import logo5 from '../../assets/header/26.svg'
+import React, {useState} from 'react'
 
 const Header = () => {
-  return (
-    <section className='header'>
+
+  const[show, ShowState] = useState(false)
+
+  return (  
+    <header className='header'>
+      <div className='container'>
+      {show && <div className='header-burger'>
         <div className='container'>
-          <div className='header-icons'>
-            <img src={Logo} alt=''/>
-          </div>
-          <div className='header-navigation'>
-            <img src={BMenu} alt=''/>
-            {/* <input  className='header-toogle-menu' type='checkbox'/> */}
-            <div className='header_hamb'></div>
-            <ul className='header-navigation_menu'>
-              <li className='header-navigation_menu_li'><a className='header-navigation_menu_li_a' href='#'>Главная</a></li>
-              <li className='header-navigation_menu_li'><a className='header-navigation_menu_li_a' href='#'>О компании</a></li>
-              <li className='header-navigation_menu_li'><a className='header-navigation_menu_li_a' href='#'>Портфолио</a></li>
-              <li className='header-navigation_menu_li'><a className='header-navigation_menu_li_a' href='#'>Что мы предлагаем</a></li>
-              <li className='header-navigation_menu_li'><a className='header-navigation_menu_li_a' href='#'>Специальное предложение</a></li>
+            <ul className='header-menu'>
+              <li className='header-menu-li'>Главная</li>
+              <li className='header-menu-li'>О компании</li>
+              <li className='header-menu-li'>Портфолио</li>
+              <li className='header-menu-li'>Что мы предлагаем</li>
+              <li className='header-menu-li'>Специальное предложение </li>
             </ul>
-            <button className='header-navigation_button' type='button'>Подать заявку</button>
-            <div className='header-navigation_icons'>
-          <img src={Flogo1} alt=''/>
-          <img src={Flogo2} alt=''/>
-          <img src={Flogo3} alt=''/>
-          <img src={Flogo4} alt=''/>
-          <img src={Flogo5} alt=''/>
+            <button className='header-button' type='button'>Оставить заявку</button>
+            <ul className='icons'>
+              <li><img src={logo1}/></li>
+              <li><img src={logo2}/></li>
+              <li><img src={logo3}/></li>
+              <li><img src={logo4}/></li>
+              <li><img src={logo5}/></li>
+            </ul>
         </div>
+        </div>
+      }
+
+             
+        
+          <div className='header-icons'>
+          <img src={Logo} alt=''/>
+          <img src={BMenu} onClick={() => ShowState(!show)}/>
           </div>
+          
           <div className='web'>
-            <h4 className='web-title'>web applications</h4>
-            <p className='web-subtitle'>Повседневная практика.</p>
-            <button className='web-btn' type='button'>Спец предложение</button>
+            <h2 className='web-title'>web applications</h2>
+            <p className='web-p'>Повседневная практика.</p>
+            <button className='web-btn' type='button'><a className='web-a' href='#'>Спец предложение</a></button>
           </div>
         </div>
-    </section>
+        
+    </header> 
   )
 }
 

@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 .container{
-    max-width: 1260px;
+    max-width: 1255px;
     padding: 0 20px;
     margin: 0 auto;
 }
-@import 'services', 'header', 'company', 'portfolio', 'advantages', 'footer';
+
+@import 'servises';
+@import 'header';
+@import 'aboutCompany';
+@import 'portfolio';
+@import 'advantages';
+@import 'footer';

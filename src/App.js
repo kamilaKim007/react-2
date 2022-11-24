@@ -5,7 +5,6 @@ import Services from "./components/Services/Services";
 import Advantages from "./components/Advantages/Advantages";
 import Footer from "./components/Footer/Footer";
 import './scss/style.scss';
-// import React, {useState} from 'react';
 
 
 
